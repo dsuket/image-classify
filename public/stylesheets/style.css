@@ -18,6 +18,16 @@ a {
   min-width: 320px;
   float: left;
 }
+
+#results .content h3 a {
+  text-decoration: none;
+  color: #2A7AD5;
+}
+#results .content h3 a:hover {
+  text-decoration: underline;
+  color: #00B7FF;
+}
+
 #results table {
   width: 80%;
   line-height: 1.4;
@@ -28,6 +38,15 @@ a {
 }
 #results table .score {
   text-align: right;
+}
+
+#results table .label a {
+  text-decoration: none;
+  color: #0B759E;
+}
+#results table .label a:hover {
+  text-decoration: underline;
+  color: #00B7FF;
 }
 
 #mask {

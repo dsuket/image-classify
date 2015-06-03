@@ -87,7 +87,12 @@
     var $tbody = $('<tbody>');
     data.forEach(function(d){
       var $tr = $('<tr>');
-      $tr.append($('<td>').addClass('label').text(d.label));
+      var $labelTd = $('<td>').addClass('label');
+      $labelTd.append($('<a>')
+        .attr('href', 'https://www.google.com/#q='+d.label)
+        .attr('target', '_blank')
+        .text(d.label));
+      $tr.append($labelTd);
       $tr.append($('<td>').addClass('score').text(d.score));
       $tbody.append($tr);
     });
