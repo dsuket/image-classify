@@ -1,5 +1,5 @@
 {
-  "name": "image-classification",
+  "name": "image-classify",
   "version": "0.0.0",
   "private": true,
   "main": "bin/www",
