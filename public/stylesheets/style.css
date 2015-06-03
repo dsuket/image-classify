@@ -80,3 +80,16 @@ body.loaded #mask{
 body.loading #mask {
   display: block;
 }
+
+.cf:before,
+.cf:after{
+  content:"";
+  display: table;
+}
+.cf:after{
+  clear:both;
+}
+/*IE6,7対策 （haslayout対策）*/
+.cf{
+  *zoom:1;
+}
