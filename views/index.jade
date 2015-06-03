@@ -1,0 +1,53 @@
+extends layout
+
+block content
+  h1 Image Classification
+  p
+  form#form
+    div.input-field
+      label
+        | input image url:
+      input#imageurl(type="text", name="imageurl", size="50", value=imageurl)
+      button(type="submit") Get
+    div.input-field
+      input#check-watson(type="checkbox", name="watson", value="true", checked=checkWatson)
+      label(for="check-watson") watson
+      input#check-caffe(type="checkbox", name="caffe", value="true", checked=checkCaffe)
+      label(for="check-caffe") caffe
+      inpt#input-result(type="hidden", name="result", value=String(result))
+
+  div#results
+    h2 Results:
+    div.image
+        img(width="320", style="display: none")
+    div#watson.content
+      h3 Watson
+      table
+        thead
+          tr
+            th Label
+            th Score
+        tbody
+          tr
+            td.label cat
+            td.score 0.8
+          tr
+            td.label dog
+            td.score 0.76
+    div#caffe.content
+      h3 Caffe
+      table
+        thead
+          tr
+            th Label
+            th Score
+        tbody
+          tr
+            td.label cat
+            td.score 0.86
+          tr
+            td.label dog
+            td.score 0.67
+  div#mask
+    div#loading
+      img(src="images/loading.gif")

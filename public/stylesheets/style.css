@@ -1,0 +1,63 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#results {
+  margin-top: 20px;
+  display: none;
+}
+
+#results .content {
+  width: 49%;
+  min-width: 320px;
+  float: left;
+}
+#results table {
+  width: 80%;
+  line-height: 1.4;
+}
+#results table th {
+  min-width: 100px;
+  border-bottom: solid 1px #ccc;
+}
+#results table .score {
+  text-align: right;
+}
+
+#mask {
+  display: none;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.8;
+}
+#mask #loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 441px;
+  height: 291px;
+}
+
+body.loaded #results{
+  display: block;
+}
+body.loaded #mask{
+  display: none;
+}
+body.loading #mask {
+  display: block;
+}
